@@ -46,54 +46,6 @@ export const Profile = () => {
           ) : (
             <h4>Вопросов нет</h4>
           )}
-          {/*    <div className="question-wrapper">*/}
-          {/*        <h4 className="question">{question.question}</h4>*/}
-          {/*        <div className="question-desc">*/}
-          {/*            <p className="question-description">{question.description}</p>*/}
-          {/*        </div>*/}
-          {/*    </div>*/}
-          {/*    <div className="views">*/}
-          {/*        <p className="view-count">{question.views} просмотров</p>*/}
-          {/*    </div>*/}
-          {/*    <div className="your-answer-wrapper">*/}
-          {/*        <p className="your-answer">Ваш ответ на вопрос</p>*/}
-          {/*    </div>*/}
-          {/*    {question.answers.length*/}
-          {/*        ? question.answers.map((item: AnswerOptions) => {*/}
-          {/*            return (*/}
-          {/*                <div className="answers">*/}
-          {/*                    <div className="answer-username-wrapper">*/}
-          {/*                        <p className="answer-username">@{item.username}</p>*/}
-          {/*                    </div>*/}
-          {/*                    <div className="answer-wrapper">*/}
-          {/*                        <p className="answer">{item.answer}</p>*/}
-          {/*                    </div>*/}
-          {/*                    <button*/}
-          {/*                        className="btn"*/}
-          {/*                        onClick={() => likeAnswer(item.id)}*/}
-          {/*                        disabled={!isLogin}*/}
-          {/*                    >*/}
-          {/*                        Нравится | {item.likes.length}*/}
-          {/*                    </button>*/}
-          {/*                </div>*/}
-          {/*            );*/}
-          {/*        })*/}
-          {/*        : null}*/}
-          {/*    {isLogin ? (*/}
-          {/*        <div className="answer-group">*/}
-          {/*<textarea*/}
-          {/*    className="text-area-input"*/}
-          {/*    onChange={(e) => setAnswer(e.target.value)}*/}
-          {/*/>*/}
-          {/*            <br />*/}
-          {/*            <button className="btn" onClick={() => postAnswer()}>*/}
-          {/*                Опубликовать*/}
-          {/*            </button>*/}
-          {/*        </div>*/}
-          {/*    ) : (*/}
-          {/*        <Link to="/login">Войти чтобы ответить на вопрос</Link>*/}
-          {/*    )}*/}
-          {/*</div>*/}
         </div>
       </div>
     </div>
