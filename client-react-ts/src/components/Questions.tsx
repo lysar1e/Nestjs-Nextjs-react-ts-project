@@ -11,6 +11,8 @@ export interface QuestionsResponse {
   description: string;
   owner: string;
   __v: number;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export const Questions = () => {
@@ -19,12 +21,10 @@ export const Questions = () => {
   const [questions, setQuestions] = useState<QuestionsResponse[]>([]);
   const pages = new Array(numberOfPages).fill(null).map((v, i) => i);
   const getAllQuestions = () => {
-    axios
-      .get(`https://fabbbbr.herokuapp.com/api/question?page=${pageNumber}`)
-      .then((response) => {
-        setQuestions(response.data.questions);
-        setNumberOfPages(response.data.totalPages);
-      });
+    axios.get(`/api/question?page=${pageNumber}`).then((response) => {
+      setQuestions(response.data.questions);
+      setNumberOfPages(response.data.totalPages);
+    });
   };
 
   useEffect(() => {

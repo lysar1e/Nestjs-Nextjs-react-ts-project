@@ -1,6 +1,6 @@
 export class AddQuestionDto {
   readonly question: string;
-  readonly tags: [];
+  readonly tags: string;
   readonly description: string;
   readonly owner: string;
 }

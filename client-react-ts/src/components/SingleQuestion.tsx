@@ -25,41 +25,31 @@ export const SingleQuestion = () => {
     answers: [],
   });
   const getQuestion = () => {
-    axios
-      .get<QuestionsResponse>(
-        `https://fabbbbr.herokuapp.com/api/question/${path}`
-      )
-      .then((res) => {
-        const { views, owner, question, description, tags, answers } = res.data;
-        setQuestion({
-          views,
-          owner,
-          question,
-          description,
-          tags,
-          answers,
-        });
+    axios.get<QuestionsResponse>(`/api/question/${path}`).then((res) => {
+      const { views, owner, question, description, tags, answers } = res.data;
+      setQuestion({
+        views,
+        owner,
+        question,
+        description,
+        tags,
+        answers,
       });
+    });
   };
   const postAnswer = async () => {
-    await axios.post(
-      `https://fabbbbr.herokuapp.com/api/question/answer/${path}`,
-      {
-        answer,
-        username: localStorage.getItem("username"),
-      }
-    );
+    await axios.post(`/api/question/answer/${path}`, {
+      answer,
+      username: localStorage.getItem("username"),
+    });
     getQuestion();
   };
 
   const likeAnswer = async (id: string) => {
-    await axios.post(
-      `https://fabbbbr.herokuapp.com/api/question/like-answer/${path}`,
-      {
-        answerId: id,
-        username: localStorage.getItem("username"),
-      }
-    );
+    await axios.post(`/api/question/like-answer/${path}`, {
+      answerId: id,
+      username: localStorage.getItem("username"),
+    });
     getQuestion();
   };
 

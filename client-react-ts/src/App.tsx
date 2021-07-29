@@ -9,6 +9,7 @@ import AuthPage from "./components/AuthPage";
 import { useAuth } from "auth-hook-yera";
 import { AuthContext } from "./context/AuthContext";
 import { AskQuestion } from "./components/AskQuestion";
+import { Profile } from "./components/Profile";
 interface AuthUserModel {
   login: (jwtToken: string, id: string) => void;
   logout: () => void;
@@ -31,6 +32,9 @@ function App() {
             <Route exact path="/login" render={() => <AuthPage />} />
             <Route exact path="/ask" render={() => <AskQuestion />} />
             <Route exact path="/q/:id" render={() => <SingleQuestion />} />
+            {isLogin ? (
+              <Route exact path="/profile" render={() => <Profile />} />
+            ) : null}
           </div>
         </Switch>
       </Router>

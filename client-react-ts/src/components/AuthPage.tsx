@@ -38,7 +38,7 @@ function AuthPage() {
     try {
       await axios
         .post(
-          "https://fabbbbr.herokuapp.com/api/auth/register",
+          "/api/auth/register",
           { ...form },
           {
             headers: {
@@ -62,7 +62,7 @@ function AuthPage() {
     try {
       await axios
         .post<LoginOptions>(
-          "https://fabbbbr.herokuapp.com/api/auth/login",
+          "/api/auth/login",
           { ...form },
           {
             headers: {

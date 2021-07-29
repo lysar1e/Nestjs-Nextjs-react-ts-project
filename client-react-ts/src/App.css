@@ -64,6 +64,7 @@ textarea {
 .sing {
   background-color: white;
   margin: auto;
+  height: 100%;
   max-width: 50%;
 }
 .answers::after {

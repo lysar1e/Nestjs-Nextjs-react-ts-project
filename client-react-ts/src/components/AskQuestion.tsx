@@ -15,7 +15,7 @@ export const AskQuestion = () => {
       description,
       owner,
     };
-    axios.post("https://fabbbbr.herokuapp.com/api/question/add", {
+    axios.post("/api/question/add", {
       ...questionObj,
     });
   };

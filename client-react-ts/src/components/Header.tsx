@@ -14,6 +14,9 @@ export const Header = () => {
             Fabr
           </Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <li>
+              <Link to="/profile">К профилю</Link>
+            </li>
             {!isLogin ? (
               <li>
                 <Link to="/login">Войти на сайт</Link>
