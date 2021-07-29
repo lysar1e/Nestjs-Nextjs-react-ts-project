@@ -1,4 +1,4 @@
-# Nestjs-react-ts-project
+# NESTJS-REACT-TS-PROJECT
 
 ### Frontend Stack:
 
