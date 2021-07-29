@@ -5,6 +5,7 @@
 - TypeScript + ReactJS + hooks
 - React Router
 - Axios
+- UI Materialize CSS
 
 ### Backend stack:
 
