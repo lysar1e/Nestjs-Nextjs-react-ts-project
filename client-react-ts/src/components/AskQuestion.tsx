@@ -21,7 +21,7 @@ export const AskQuestion = () => {
       owner,
     };
     axios
-      .post("/api/question/add", {
+      .post("https://qnafabr.herokuapp.com/api/question/add", {
         ...questionObj,
       })
       .then(() => {

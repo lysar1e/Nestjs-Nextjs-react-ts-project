@@ -36,7 +36,7 @@ export const SingleQuestion = () => {
   });
   const getQuestion = () => {
     setIsFetching(true);
-    axios.get<QuestionsResponse>(`/api/question/${path}`).then((res) => {
+    axios.get<QuestionsResponse>(`https://qnafabr.herokuapp.com/api/question/${path}`).then((res) => {
       const { views, owner, question, description, tags, answers } = res.data;
       setQuestion({
         views,
@@ -50,7 +50,7 @@ export const SingleQuestion = () => {
     });
   };
   const postAnswer = async () => {
-    await axios.post(`/api/question/answer/${path}`, {
+    await axios.post(`https://qnafabr.herokuapp.com/api/question/answer/${path}`, {
       answer,
       username: localStorage.getItem("username"),
     });
@@ -58,7 +58,7 @@ export const SingleQuestion = () => {
   };
 
   const likeAnswer = async (id: string) => {
-    await axios.post(`/api/question/like-answer/${path}`, {
+    await axios.post(`https://qnafabr.herokuapp.com/api/question/like-answer/${path}`, {
       answerId: id,
       username: localStorage.getItem("username"),
     });

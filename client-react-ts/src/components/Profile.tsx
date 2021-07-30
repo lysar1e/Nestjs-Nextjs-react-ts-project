@@ -21,7 +21,7 @@ export const Profile = () => {
   const [isFetching, setIsFetching] = useState(true);
   const getUserQuestions = () => {
     axios
-      .get<UserResponse>(`/api/question/profile/${username}`)
+      .get<UserResponse>(`https://qnafabr.herokuapp.com/api/question/profile/${username}`)
       .then(({ data }) => {
         setQuestion(data);
         setIsFetching(false);

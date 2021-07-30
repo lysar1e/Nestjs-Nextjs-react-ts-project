@@ -1,16 +1,16 @@
-body{
-  background: rgb(223,225, 229);
+body {
+  background: rgb(223, 225, 229);
 }
 .nav-wrapper {
   margin-left: 400px;
   margin-right: 400px;
 }
 .nav {
-  background-color: rgb(50,59,67)!important;
+  background-color: rgb(50, 59, 67) !important;
 }
 .collection-item {
-  padding: 60px 70px!important;
-  margin-top: 10px!important;
+  padding: 60px 70px !important;
+  margin-top: 10px !important;
 }
 .username {
   font-size: 24px;
@@ -18,7 +18,7 @@ body{
 .username-wrapper::after {
   display: block;
   height: 2px;
-  background-color: #81E0FD;
+  background-color: #81e0fd;
   content: " ";
   width: 100%;
   /*margin: 0 auto;*/
@@ -58,7 +58,7 @@ textarea {
   /*margin-left: 100px;*/
 }
 .answer {
-  line-height:30px;
+  line-height: 30px;
   max-width: 50%;
 }
 .sing {

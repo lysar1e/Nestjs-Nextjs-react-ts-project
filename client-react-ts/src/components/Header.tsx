@@ -15,7 +15,7 @@ export const Header: React.FC<Props> = ({ setUsers }) => {
   const username = localStorage.getItem("username");
   const [user, setUser] = useState("");
   const findUsers = async () => {
-    axios.post(`/api/auth/find/${user}`).then((res) => {
+    axios.post(`https://qnafabr.herokuapp.com/api/auth/find/${user}`).then((res) => {
       setUsers(res.data);
       history.push(`/search/${user}`);
     });

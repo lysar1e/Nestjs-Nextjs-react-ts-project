@@ -16,7 +16,7 @@ export const Questions = () => {
   const pages = new Array(numberOfPages).fill(null).map((v, i) => i);
   const getAllQuestions = () => {
     setIsFetching(true);
-    axios.get(`/api/question?page=${pageNumber}`).then((response) => {
+    axios.get(`https://qnafabr.herokuapp.com/api/question?page=${pageNumber}`).then((response) => {
       setQuestions(response.data.questions);
       setNumberOfPages(response.data.totalPages);
       setIsFetching(false);

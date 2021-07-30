@@ -41,7 +41,7 @@ function AuthPage() {
       setIsFetching(true);
       await axios
         .post(
-          "/api/auth/register",
+          "https://qnafabr.herokuapp.com/api/auth/register",
           { ...form },
           {
             headers: {
@@ -67,7 +67,7 @@ function AuthPage() {
       setIsFetching(true);
       await axios
         .post<LoginOptions>(
-          "/api/auth/login",
+          "https://qnafabr.herokuapp.com/api/auth/login",
           { ...form },
           {
             headers: {
