@@ -34,10 +34,11 @@ export class QuestionService {
       id,
     };
     const user = await this.userModel.findOne({
-      username: addQuestionDto.owner,
+      username: owner,
     });
     if (!user) {
       throw new HttpException("Что-то пошло не так попробуйте еще раз", 401);
+      return;
     }
     // @ts-ignore
     await user.questions.push(questionObject);
@@ -52,7 +53,18 @@ export class QuestionService {
     const pages = parseInt(page);
     const total = await this.questionModel.countDocuments();
     const questions = await this.questionModel
-      .find()
+      .find(
+        {},
+        {
+          __v: 0,
+          updatedAt: 0,
+          createdAt: 0,
+          owner: 0,
+          description: 0,
+          tags: 0,
+          answers: 0,
+        }
+      )
       .sort({ createdAt: -1 })
       .limit(PAGE_SIZE)
       .skip(PAGE_SIZE * pages);
@@ -60,7 +72,11 @@ export class QuestionService {
   }
 
   async getQuestionById(id: string) {
-    const question = await this.questionModel.findById(id);
+    const question = await this.questionModel.findById(id, {
+      __v: 0,
+      createdAt: 0,
+      updatedAt: 0,
+    });
     if (!question) {
       throw new HttpException("Вопрос не найден!", 404);
       return;
@@ -71,6 +87,7 @@ export class QuestionService {
   }
 
   async answerQuestion(questionId: string, postAnswerDto: PostAnswerDto) {
+    const { answer, username } = postAnswerDto;
     const question = await this.questionModel.findById(questionId);
     const id = await uniqid();
     if (!question) {
@@ -78,8 +95,8 @@ export class QuestionService {
       return;
     }
     const answerObject: AnswerOptions = {
-      answer: postAnswerDto.answer,
-      username: postAnswerDto.username,
+      answer,
+      username,
       likes: [],
       id,
     };
@@ -90,6 +107,7 @@ export class QuestionService {
   }
 
   async likeAnswer(id: string, likeAnswerDto: LikeAnswerDto) {
+    const { username } = likeAnswerDto;
     const question = await this.questionModel.findById(id);
     if (!question) {
       throw new HttpException("Вопрос не найден!", 404);
@@ -102,9 +120,9 @@ export class QuestionService {
       return;
     }
     answer.forEach((item: LikeAnswerOptions) => {
-      const isLiked = item.likes.includes(likeAnswerDto.username);
+      const isLiked = item.likes.includes(username);
       if (isLiked) {
-        const index = item.likes.indexOf(likeAnswerDto.username);
+        const index = item.likes.indexOf(username);
         item.likes.splice(index, 1);
       } else {
         item.likes.push(likeAnswerDto.username);
@@ -115,12 +133,26 @@ export class QuestionService {
   }
 
   async getUserQuestions(username: string) {
-    const user = await this.userModel.find({ username }, {password: 0, __v: 0, email: 0, questions: 0});
-    const questions = await this.questionModel.find({owner: username}, {__v: 0});
+    const user = await this.userModel.find(
+      { username },
+      { password: 0, __v: 0, email: 0, questions: 0 }
+    );
+    const questions = await this.questionModel.find(
+      { owner: username },
+      {
+        __v: 0,
+        updatedAt: 0,
+        tags: 0,
+        createdAt: 0,
+        owner: 0,
+        description: 0,
+        answers: 0,
+      }
+    );
     if (!user.length) {
       throw new HttpException("Пользователь не найден!", 404);
       return;
     }
-    return {user, questions};
+    return { user, questions };
   }
 }

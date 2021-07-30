@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Header } from "./components/Header";
 import { Questions } from "./components/Questions";
@@ -41,7 +41,11 @@ function App() {
             <Route exact path="/ask" render={() => <AskQuestion />} />
             <Route exact path="/q/:id" render={() => <SingleQuestion />} />
             <Route exact path="/profile/:username" render={() => <Profile />} />
-            <Route exact path="/search/:username" render={() => <UsersList users={users} />} />
+            <Route
+              exact
+              path="/search/:username"
+              render={() => <UsersList users={users} />}
+            />
           </div>
         </Switch>
       </Router>

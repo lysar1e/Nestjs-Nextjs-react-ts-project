@@ -3,16 +3,31 @@
   <component name="ChangeListManager">
     <list default="true" id="a5ac4223-4ab9-49fc-baed-802d002ede93" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/app.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-nest/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-nest/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/auth/dto/create-user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/auth/dto/create-user.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/auth/dto/login-user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/auth/dto/login-user.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/auth/schemas/user.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/auth/schemas/user.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/question/dto/add-question.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/question/dto/add-question.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/question/dto/like-answer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/question/dto/like-answer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/question/dto/post-answer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/question/dto/post-answer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/question/question.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/question/question.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/question/question.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/question/question.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-nest/src/question/question.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/question/question.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/question/schemas/question.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/question/schemas/question.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react-ts/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/AskQuestion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/AskQuestion.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/AuthPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/AuthPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/Questions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/Questions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/SingleQuestion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/SingleQuestion.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/UsersList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/UsersList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +58,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -59,7 +74,7 @@
       <workItem from="1627595759700" duration="70000" />
       <workItem from="1627595970274" duration="7000" />
       <workItem from="1627610165432" duration="6514000" />
-      <workItem from="1627647509878" duration="8709000" />
+      <workItem from="1627647509878" duration="17982000" />
     </task>
     <servers />
   </component>
