@@ -65,15 +65,16 @@ export class AuthService {
   async findUsers(username: string) {
     const s = username;
     const regex = await new RegExp(s, 'i') // i for case insensitive
-    const users = await this.userModel.find({username: {$regex: regex}});
-    const allUsers: UserFindOptions[] = [];
-    users.map((item) => {
-      // @ts-ignore
-      const {passwordd, ...others} = item;
-      // @ts-ignore
-      const {password, questions, __v, ...other} = others._doc;
-     allUsers.push(other);
-    });
-    return allUsers;
+    const users = await this.userModel.find({username: {$regex: regex}}, {password: 0, __v: 0, questions: 0, email: 0});
+    return users;
+    // const allUsers: UserFindOptions[] = [];
+    // users.map((item) => {
+    //   // @ts-ignore
+    //   const {passwordd, ...others} = item;
+    //   // @ts-ignore
+    //   const {password, questions, __v, ...other} = others._doc;
+    //  allUsers.push(other);
+    // });
+    // return allUsers;
   }
 }

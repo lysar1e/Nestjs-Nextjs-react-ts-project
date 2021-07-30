@@ -1,4 +1,4 @@
-import { Body, Controller, HttpCode, Post } from '@nestjs/common';
+import { Body, Controller, HttpCode, Param, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { LoginUserDto } from './dto/login-user.dto';
@@ -19,9 +19,9 @@ export class AuthController {
   }
 
 
-  @Post('find')
+  @Post('find/:username')
   @HttpCode(200)
-  findUsers(@Body('username') username: string): any {
+  findUsers(@Param('username') username: string): any {
     return this.authService.findUsers(username)
   }
 }

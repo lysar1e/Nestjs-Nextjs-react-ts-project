@@ -1,16 +1,25 @@
 import React, { useContext, useState } from "react";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
+import { UsersOptions } from "../App";
 
-export const Header = () => {
+
+interface Props {
+    setUsers: React.Dispatch<React.SetStateAction<UsersOptions[]>>;
+
+}
+export const Header: React.FC<Props> = ({setUsers}) => {
+  const history = useHistory();
   // @ts-ignore
   const { isLogin }: { isLogin: boolean } = useContext(AuthContext);
   const username = localStorage.getItem('username');
   const [user, setUser] = useState('');
-  const findUsers = () => {
-      axios.post('/api/auth/find', {username: user}).then(res => console.log(res))
+  const findUsers = async () => {
+      axios.post(`/api/auth/find/${user}`).then(res => {
+        setUsers(res.data);
+        history.push(`/search/${user}`);
+      })
   }
   const findUser = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();

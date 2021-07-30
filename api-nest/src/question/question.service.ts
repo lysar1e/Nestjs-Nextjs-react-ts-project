@@ -115,11 +115,12 @@ export class QuestionService {
   }
 
   async getUserQuestions(username: string) {
-    const questions = await this.questionModel.find({ owner: username });
-    if (!questions.length) {
+    const user = await this.userModel.find({ username }, {password: 0, __v: 0, email: 0, questions: 0});
+    const questions = await this.questionModel.find({owner: username}, {__v: 0});
+    if (!user.length) {
       throw new HttpException("Пользователь не найден!", 404);
       return;
     }
-    return questions;
+    return {user, questions};
   }
 }
