@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5ac4223-4ab9-49fc-baed-802d002ede93" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/AskQuestion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/AskQuestion.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/AuthPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/AuthPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/Questions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/Questions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/SingleQuestion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/SingleQuestion.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="a5ac4223-4ab9-49fc-baed-802d002ede93" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +47,7 @@
       <workItem from="1627595759700" duration="70000" />
       <workItem from="1627595970274" duration="7000" />
       <workItem from="1627610165432" duration="6514000" />
-      <workItem from="1627647509878" duration="19794000" />
+      <workItem from="1627647509878" duration="21067000" />
     </task>
     <servers />
   </component>
