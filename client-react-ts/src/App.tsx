@@ -32,9 +32,7 @@ function App() {
             <Route exact path="/login" render={() => <AuthPage />} />
             <Route exact path="/ask" render={() => <AskQuestion />} />
             <Route exact path="/q/:id" render={() => <SingleQuestion />} />
-            {isLogin ? (
-              <Route exact path="/profile" render={() => <Profile />} />
-            ) : null}
+            <Route exact path="/profile/:username" render={() => <Profile />} />
           </div>
         </Switch>
       </Router>

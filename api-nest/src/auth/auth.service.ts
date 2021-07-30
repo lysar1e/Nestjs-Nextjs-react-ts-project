@@ -6,6 +6,12 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { compare, hash } from 'bcryptjs';
 import { LoginUserDto } from './dto/login-user.dto';
 import { sign } from 'jsonwebtoken';
+
+interface UserFindOptions {
+  _id: string;
+  email: string;
+  username: string;
+}
 @Injectable()
 export class AuthService {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
@@ -54,5 +60,20 @@ export class AuthService {
       expiresIn: '1h',
     });
     return { token, userId: user.id, username: user.username };
+  }
+
+  async findUsers(username: string) {
+    const s = username;
+    const regex = await new RegExp(s, 'i') // i for case insensitive
+    const users = await this.userModel.find({username: {$regex: regex}});
+    const allUsers: UserFindOptions[] = [];
+    users.map((item) => {
+      // @ts-ignore
+      const {passwordd, ...others} = item;
+      // @ts-ignore
+      const {password, questions, __v, ...other} = others._doc;
+     allUsers.push(other);
+    });
+    return allUsers;
   }
 }

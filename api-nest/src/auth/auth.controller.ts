@@ -17,4 +17,11 @@ export class AuthController {
   login(@Body() loginUserDto: LoginUserDto) {
     return this.authService.loginUser(loginUserDto);
   }
+
+
+  @Post('find')
+  @HttpCode(200)
+  findUsers(@Body('username') username: string): any {
+    return this.authService.findUsers(username)
+  }
 }

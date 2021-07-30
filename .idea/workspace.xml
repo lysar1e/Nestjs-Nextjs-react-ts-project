@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5ac4223-4ab9-49fc-baed-802d002ede93" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-nest/src/question/question.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api-nest/src/question/question.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react-ts/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-react-ts/src/components/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-react-ts/src/components/Profile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +32,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/client-react-ts/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -37,7 +43,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1627586044093</updated>
-      <workItem from="1627586045828" duration="5921000" />
+      <workItem from="1627586045828" duration="6070000" />
+      <workItem from="1627595759700" duration="70000" />
+      <workItem from="1627595970274" duration="7000" />
+      <workItem from="1627610165432" duration="6325000" />
     </task>
     <servers />
   </component>
@@ -55,7 +64,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="origin/dev" />
                       </list>
                     </value>
                   </entry>
@@ -66,6 +75,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
