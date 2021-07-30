@@ -1,6 +1,6 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
-import { timestamp } from 'rxjs';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Document } from "mongoose";
+import { timestamp } from "rxjs";
 export type QuestionDocument = Question & Document;
 
 @Schema({ timestamps: true })
