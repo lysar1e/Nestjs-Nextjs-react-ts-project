@@ -2,7 +2,7 @@
 
 ### Frontend Stack:
 
-- TypeScript + ReactJS + NextJs + hooks
+- TypeScript + ReactJS + NextJS + hooks
 - React Router
 - Axios
 - UI Materialize CSS
