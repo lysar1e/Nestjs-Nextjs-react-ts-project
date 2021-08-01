@@ -1,11 +1,12 @@
-# NESTJS-REACT-TS-PROJECT
+# NESTJS-NEXTJS-REACT-TS-PROJECT
 
 ### Frontend Stack:
 
-- TypeScript + ReactJS + hooks
+- TypeScript + ReactJS + NextJs + hooks
 - React Router
 - Axios
 - UI Materialize CSS
+- NextJs-Progressbar
 
 ### Backend stack:
 
