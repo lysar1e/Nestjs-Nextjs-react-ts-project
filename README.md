@@ -6,7 +6,7 @@
 - React Router
 - Axios
 - UI Materialize CSS
-- NextJs-Progressbar
+- NextJS-Progressbar
 
 ### Backend stack:
 
